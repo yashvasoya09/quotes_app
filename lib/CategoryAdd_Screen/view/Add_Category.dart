@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,17 +18,18 @@ class _CategoryState extends State<Category> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.red,
-        title: Text(
-          "${homeController.QuoteData.category}",
-          style: GoogleFonts.lobster(fontSize: 30, color: Colors.white),
-        ),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   elevation: 0,
+      //   backgroundColor: Colors.red,
+      //   title: Text(
+      //     "${homeController.QuoteData.category}",
+      //     style: GoogleFonts.lobster(fontSize: 30, color: Colors.white),
+      //   ),
+      //   centerTitle: true,
+      // ),
       body: Stack(
         children: [
+
           Obx(
             () => Container(
               height: double.infinity,
@@ -68,7 +70,13 @@ class _CategoryState extends State<Category> {
                 color: Colors.white,
               ),
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 25.0,horizontal: 12),
+            child: InkWell(onTap: () {
+              Get.back();
+            },child: Icon(CupertinoIcons.back,color: Colors.white)),
+          ),
         ],
       ),
     );

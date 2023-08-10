@@ -1,7 +1,5 @@
 import 'dart:io';
-import 'dart:typed_data';
 import 'package:path_provider/path_provider.dart';
-import 'package:quotes_app/Screen/HomePage/Model/NoteModel.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -37,7 +35,6 @@ class DBHelper {
   Future<void> insertData({required String category, required String quote,required String color}) async {
     database = await checkDB();
     database!.insert("category", {"category": category, "quote": quote, "color" : color}).then((value) {}).catchError((error){
-          print("=========== $error");
       }
     );
   }

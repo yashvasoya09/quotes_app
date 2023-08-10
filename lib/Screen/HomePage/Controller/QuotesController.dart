@@ -13,7 +13,7 @@ class HomeController extends GetxController {
   RxList<NoteModel> popu = <NoteModel>[
     NoteModel(
         quote: "The way to get started is to quit talking and begin doing.",
-        category: "Motivetion",
+        category: "Motivation",
         image: [
           "assets/image/best.jpg",
           "assets/image/reto.jpg",
@@ -22,7 +22,7 @@ class HomeController extends GetxController {
         ]),
     NoteModel(
         quote: "As he read, I fell in love the way you fall asleep: slowly, and then all at once.",
-        category: "Love",
+        category: "Success",
         image: [
           "assets/image/best.jpg",
           "assets/image/reto.jpg",
@@ -65,13 +65,10 @@ class HomeController extends GetxController {
   }
 
   RxList<String> imageList = [
-    "assets/image/wine1.jpg", //0
-    "assets/image/wine2.jpg", //1
-    "assets/image/wine3.jpg", //2
-    "assets/image/wine4.jpeg", //3
-    "assets/image/wine5.jpg", //4
-    "assets/image/wine6.jpg", //5
-    "assets/image/wine10.webp", //6
+    "assets/image/h1.jpg", //0
+    // "assets/image/h2.jpg", //1
+    "assets/image/h3.jpg", //2
+    "assets/image/h4.jpg", //3
   ].obs;
 
   void changeColor(Color color) {

@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:focused_menu/modals.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,12 +29,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.black,
           centerTitle: true,
           title: (Text(
             "Amazing Quotes",
-            style: GoogleFonts.lobster(fontSize: 30, color: Colors.white),
+            style: GoogleFonts.play(color: Colors.white),
           )),
           actions: [
             InkWell(
@@ -42,7 +44,7 @@ class _HomePageState extends State<HomePage> {
               },
               child: Padding(
                 padding: EdgeInsets.only(right: 15),
-                child: Icon(Icons.add_box_outlined),
+                child: Icon(CupertinoIcons.add ),
               ),
             ),
           ],
@@ -73,6 +75,15 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
+              SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Row(
+                  children: [
+                    Text("Our Quotes",style: GoogleFonts.play(fontSize: 20,color: Colors.white),),
+                  ],
+                ),
+              ),
               Padding(
                 padding: EdgeInsets.all(8.0),
                 child: InkWell(
@@ -85,6 +96,8 @@ class _HomePageState extends State<HomePage> {
                     height: 40.h,
                     width: 100.w,
                     decoration: BoxDecoration(
+
+
                       borderRadius: BorderRadius.circular(20),
                       // color: Colors.white,
                     ),
@@ -106,18 +119,12 @@ class _HomePageState extends State<HomePage> {
                                   alignment: Alignment.center,
                                   child: Text(
                                     "${homeController.popu[0].category}",
-                                    style: GoogleFonts.lobster(
+                                    style: GoogleFonts.play(
                                         fontSize: 20, color: Colors.white),
                                   ),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    gradient: RadialGradient(
-                                      colors: [
-                                        Colors.red.shade200,
-                                        Colors.red.shade300,
-                                        Colors.red,
-                                      ],
-                                    ),
+                                      image: DecorationImage(image: AssetImage("assets/image/p1.jpg"),fit: BoxFit.cover),
                                   ),
                                 ),
                               ),
@@ -136,18 +143,14 @@ class _HomePageState extends State<HomePage> {
                                   child: Center(
                                       child: Text(
                                     "${homeController.popu[1].category}",
-                                    style: GoogleFonts.lobster(
-                                        fontSize: 20, color: Colors.white),
+                                    style: GoogleFonts.play(
+                                      
+                                        fontSize: 25, color: Colors.white),
                                   )),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    gradient: RadialGradient(
-                                      colors: [
-                                        Colors.red.shade200,
-                                        Colors.red.shade300,
-                                        Colors.red,
-                                      ],
-                                    ),
+
+                                    image: DecorationImage(image: AssetImage("assets/image/p2.jpg"),fit: BoxFit.cover)
                                   ),
                                 ),
                               ),
@@ -175,18 +178,12 @@ class _HomePageState extends State<HomePage> {
                                       child: Center(
                                           child: Text(
                                         "${homeController.popu[2].category}",
-                                        style: GoogleFonts.lobster(
+                                        style: GoogleFonts.play(
                                             fontSize: 20, color: Colors.white),
                                       )),
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(20),
-                                        gradient: RadialGradient(
-                                          colors: [
-                                            Colors.red.shade200,
-                                            Colors.red.shade300,
-                                            Colors.red,
-                                          ],
-                                        ),
+                                          image: DecorationImage(image: AssetImage("assets/image/p3.jpg"),fit: BoxFit.cover)
                                       ),
                                     ),
                                   ),
@@ -205,18 +202,12 @@ class _HomePageState extends State<HomePage> {
                                       child: Center(
                                           child: Text(
                                         "${homeController.popu[3].category}",
-                                        style: GoogleFonts.lobster(
+                                        style: GoogleFonts.play(
                                             fontSize: 20, color: Colors.white),
                                       )),
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(20),
-                                        gradient: RadialGradient(
-                                          colors: [
-                                            Colors.red.shade200,
-                                            Colors.red.shade300,
-                                            Colors.red,
-                                          ],
-                                        ),
+                                          image: DecorationImage(image: AssetImage("assets/image/p4.jpg"),fit: BoxFit.cover),
                                       ),
                                     ),
                                   ),
@@ -230,6 +221,15 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Row(
+                  children: [
+                    Text("Your Quotes",style: GoogleFonts.play(fontSize: 20,color: Colors.white),),
+                  ],
+                ),
+              ),
+              SizedBox(height: 10),
               Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Obx(
@@ -257,11 +257,6 @@ class _HomePageState extends State<HomePage> {
                                       homeController.DataList[index]['id']);
                                   homeController.getData();
                                 },
-                                //     trailingIcon: Icon(Icons.delete)),
-                                // FocusedMenuItem(
-                                //     title: Text("Update"),
-                                //     onPressed: () {},
-                                //     trailingIcon: Icon(Icons.edit),
                               ),
                             ],
                             onPressed: () {},
@@ -276,18 +271,13 @@ class _HomePageState extends State<HomePage> {
                                 child: Center(
                                   child: Text(
                                     "${homeController.DataList[index]['category']}",
-                                    style: GoogleFonts.lobster(
+                                    style: GoogleFonts.play(
                                         fontSize: 20, color: Colors.white),
                                   ),
                                 ),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
-                                  gradient: RadialGradient(
-                                    colors: [
-                                      Colors.red.shade200,
-                                      Colors.red.shade300,
-                                      Colors.red,
-                                    ],
+                                    image: DecorationImage(image: AssetImage("assets/image/p1.jpg"),fit: BoxFit.cover
                                   ),
                                 ),
                               ),
@@ -303,116 +293,14 @@ class _HomePageState extends State<HomePage> {
                         Get.toNamed('Home');
                       },
                       child: Text(
-                        "Pleas Add Your Category",
-                        style: GoogleFonts.lobster(
+                        "Add At List One Category",
+                        style: GoogleFonts.play(
                             fontSize: 20, color: Colors.black),
                       ),
                     ),
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: const EdgeInsets.all(8.0),
-              //   child: Container(
-              //     height: 40.h,
-              //     width: 100.w,
-              //     decoration: BoxDecoration(
-              //       borderRadius: BorderRadius.circular(20),
-              //       // color: Colors.white,
-              //     ),
-              //     child: Column(
-              //       children: [
-              //         Padding(
-              //           padding: const EdgeInsets.all(15),
-              //           child: Row(
-              //             children: [
-              //               Container(
-              //                 height: 15.h,
-              //                 width: 40.w,
-              //                 child: Center(child: Text("Love")),
-              //                 decoration: BoxDecoration(
-              //                   borderRadius: BorderRadius.circular(20),
-              //                   gradient: RadialGradient(
-              //                     colors: [
-              //                       Colors.red.shade200,
-              //                       Colors.red.shade300,
-              //                       Colors.red,
-              //                     ],
-              //                   ),
-              //                 ),
-              //               ),
-              //               SizedBox(
-              //                 width: 6.w,
-              //               ),
-              //               Container(
-              //                 height: 15.h,
-              //                 width: 40.w,
-              //                 child: Center(child: Text("Love")),
-              //                 decoration: BoxDecoration(
-              //                   borderRadius: BorderRadius.circular(20),
-              //                   gradient: RadialGradient(
-              //                     colors: [
-              //                       Colors.red.shade200,
-              //                       Colors.red.shade300,
-              //                       Colors.red,
-              //                     ],
-              //                   ),
-              //                 ),
-              //               ),
-              //             ],
-              //           ),
-              //         ),
-              //         SizedBox(
-              //           height: 0,
-              //         ),
-              //         Column(
-              //           children: [
-              //             Padding(
-              //               padding: const EdgeInsets.all(15),
-              //               child: Row(
-              //                 children: [
-              //                   Container(
-              //                     height: 15.h,
-              //                     width: 40.w,
-              //                     child: Center(child: Text("Love")),
-              //                     decoration: BoxDecoration(
-              //                       borderRadius: BorderRadius.circular(20),
-              //                       gradient: RadialGradient(
-              //                         colors: [
-              //                           Colors.red.shade200,
-              //                           Colors.red.shade300,
-              //                           Colors.red,
-              //                         ],
-              //                       ),
-              //                     ),
-              //                   ),
-              //                   SizedBox(
-              //                     width: 6.w,
-              //                   ),
-              //                   Container(
-              //                     height: 15.h,
-              //                     width: 40.w,
-              //                     child: Center(child: Text("Love")),
-              //                     decoration: BoxDecoration(
-              //                       borderRadius: BorderRadius.circular(20),
-              //                       gradient: RadialGradient(
-              //                         colors: [
-              //                           Colors.red.shade200,
-              //                           Colors.red.shade300,
-              //                           Colors.red,
-              //                         ],
-              //                       ),
-              //                     ),
-              //                   ),
-              //                 ],
-              //               ),
-              //             )
-              //           ],
-              //         ),
-              //       ],
-              //     ),
-              //   ),
-              // ),
             ],
           ),
         ),
