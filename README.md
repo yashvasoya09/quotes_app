@@ -27,7 +27,7 @@ https://github.com/yashvasoya09/quotes_app/assets/120082183/143afb34-db25-484a-8
 <img src = "https://github.com/yashvasoya09/quotes_app/assets/120082183/a1ce71f2-3dbe-4bbd-9176-9ec50c95689f" height="30%"width="30%">
 <img src = "https://github.com/yashvasoya09/quotes_app/assets/120082183/af161a9e-6c74-4271-a502-c8b9dd76f2bd" height="30%"width="30%">
 <img src = "https://github.com/yashvasoya09/quotes_app/assets/120082183/bc9c2a45-b67f-4765-ab5b-47d0bbe79c88" height="30%"width="30%">
-<img src = "https://github.com/yashvasoya09/quotes_app/assets/120082183/5c66dc2e-1a39-4885-9c5f-4f84937639ab" height="50%"width="50%">
-<img src = "https://github.com/yashvasoya09/quotes_app/assets/120082183/0968955e-c082-4b65-953f-5029686db349" height="50%"width="50%">
-<img src = "https://github.com/yashvasoya09/quotes_app/assets/120082183/3a53ada6-644d-43b7-b596-f18b868dcdea" height="50%"width="50%">
+<img src = "https://github.com/yashvasoya09/quotes_app/assets/120082183/5c66dc2e-1a39-4885-9c5f-4f84937639ab" height="30%"width="30%">
+<img src = "https://github.com/yashvasoya09/quotes_app/assets/120082183/0968955e-c082-4b65-953f-5029686db349" height="0%"width="30%">
+<img src = "https://github.com/yashvasoya09/quotes_app/assets/120082183/3a53ada6-644d-43b7-b596-f18b868dcdea" height="30%"width="30%">
 </p>
