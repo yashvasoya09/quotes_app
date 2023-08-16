@@ -55,8 +55,6 @@ class HomeController extends GetxController {
   Rx<TextEditingController> txtAdd3 = TextEditingController().obs;
   Rx<GlobalKey<FormState>> errorkey = GlobalKey<FormState>().obs;
 
-  // Rx<Color> currentColor = Colors.red.obs;
-  // Rx<Color> pickColor = Colors.red.obs;
   Color currentColor = Colors.red;
   Color pickColor = Colors.red;
 
